@@ -1,9 +1,9 @@
 import keyLog
-import userDataHandling as udh
+import fileHandling as fh
 
-user1 = udh.User()
+user1 = fh.UserFileHandler()
 user1.takeUserInput()
-udh.User.handleUserData(user1, user1.userInfo["name"], user1.userInfo["age"], user1.userInfo["phone"],
+fh.UserFileHandler.handleUserData(user1, user1.userInfo["name"], user1.userInfo["age"], user1.userInfo["phone"],
                          user1.userInfo["marital"], user1.userInfo["country"], user1.userInfo["number"])
 
 print("The data you entered was: ")

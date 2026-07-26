@@ -1,25 +1,9 @@
-class User():
+import userDataHandling as udh
 
-    userInfo = {
-        "name": "",
-        "age": "",
-        "phone": "",
-        "marital": "",
-        "country": "",
-        "number": ""
-    }
+class UserFileHandler(udh.User):
 
-    #prompt the user for their information
-    def takeUserInput(self):
-        try:
-            self.userInfo["name"] = input("Please enter your name: ")
-            self.userInfo["age"] = input("Please enter your age: ")
-            self.userInfo["phone"] = input("Please enter your phone number: ")
-            self.userInfo["marital"] = input("Please enter your marital status: ")
-            self.userInfo["country"] = input("Please enter what country you live in: ")
-            self.userInfo["number"] = input("Please enter your favorite number: ")
-        except(TypeError):
-            print("Some of the input was the wrong type! Please try again")
+    #path for the file we will be writing the data to
+    filePath = "user_info.txt"
 
     #validate the information that the user provided
     def validateUserData(self, name:str, age:str, phone:str, marital:str, country:str, number:str):
@@ -29,7 +13,7 @@ class User():
         validMarital = False
         validCountry = False
         validNumber = False
-
+        
         if name.isalpha():
             validName = True
 
@@ -55,7 +39,7 @@ class User():
 
     #store the user's data into a text file
     def storeUserData(self, name:str, age:str, phone:str, marital:str, country:str, number:str):
-        with open("user_info.txt", "w") as file:
+        with open(self.filePath, "w") as file:
             file.write("Name: " + name + "\n")
             file.write("Age: " + age + "\n")
             file.write("Phone Number: " + phone + "\n")
@@ -70,7 +54,7 @@ class User():
                     print(line)
 
     #runs the various other functions related to user data
-    def handleUserData(self, name:str, age:str, phone:str, marital:str, country:str, number:str):
+    def handleUserData(self,name:str, age:str, phone:str, marital:str, country:str, number:str):
         if self.validateUserData(name, age, phone, marital, country, number):
             self.storeUserData(name, age, phone, marital, country, number)
             self.readUserData(name, age, phone, marital, country, number)
