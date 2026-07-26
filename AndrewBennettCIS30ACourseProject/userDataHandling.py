@@ -1,5 +1,6 @@
 class User():
 
+    #stores data input by the user
     userInfo = {
         "name": "",
         "age": "",
