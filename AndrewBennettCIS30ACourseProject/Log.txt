@@ -1,3 +1,0 @@
-Logging started
-'t' 'h' 'i' 's' Key.space 'i' 's' Key.space 'a' Key.space 't' 'e' 's' 't' Key.space 't' 'h' 'a' 'n' 'k' Key.space 'y' 'o' 'u' Key.space 'v' 'e' 'r' 'y' Key.space 'm' 'u' 'c' 'h' Key.esc 
-Logging ended with Key.esc

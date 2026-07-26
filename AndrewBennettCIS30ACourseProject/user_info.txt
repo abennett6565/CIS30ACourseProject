@@ -1,6 +1,0 @@
-Name: Andrew
-Age: 35
-Phone Number: 345667
-Marital Status: married
-Home Country: usa
-Favorite Number: 67
